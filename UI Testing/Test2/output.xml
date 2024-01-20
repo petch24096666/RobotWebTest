@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231124 12:37:30.624" rpa="false" schemaversion="4">
+<suite id="s1" name="Test2" source="C:\Users\petch\Desktop\Year3-1\ITDS362_Software Quality Assurance and Testing\project phase 2\UI Testing\Test2\test2.robot">
+<test id="s1-t1" name="Test Search and Checkout LifeGadget using Chrome" line="41">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url_lifeGadget}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 12:37:30.874" level="INFO">Opening browser 'Chrome' to base url 'http://45.144.164.182:8080/'.</msg>
+<status status="PASS" starttime="20231124 12:37:30.874" endtime="20231124 12:37:33.570"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 12:37:33.570" endtime="20231124 12:37:33.707"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:30.873" endtime="20231124 12:37:33.707"/>
+</test>
+<test id="s1-t2" name="Test Search" line="44">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:33.712" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:37:33.710" endtime="20231124 12:37:33.865"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${MicrophoneText}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:33.867" level="INFO">Typing text 'Microphone' into text field 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:37:33.866" endtime="20231124 12:37:34.196"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${SearchIcon}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:34.198" level="INFO">Clicking button 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20231124 12:37:34.197" endtime="20231124 12:37:34.643"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231124 12:37:34.831" level="INFO">${title} = Search Results for “Microphone” – Life Gadget</msg>
+<status status="PASS" starttime="20231124 12:37:34.644" endtime="20231124 12:37:34.831"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Search Results for “Microphone” – Life Gadget</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:37:34.831" endtime="20231124 12:37:34.832"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:33.710" endtime="20231124 12:37:34.833"/>
+</test>
+<test id="s1-t3" name="Test Click Item" line="50">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LogitechMicrophoneItem}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231124 12:37:34.834" endtime="20231124 12:37:34.873"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LogitechMicrophoneItem}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:34.874" level="INFO">Clicking element 'xpath=//*[@id="st-primary-content"]/ul/li[1]/div/div/div[2]/div/h3/a'.</msg>
+<status status="PASS" starttime="20231124 12:37:34.874" endtime="20231124 12:37:35.324"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231124 12:37:35.339" level="INFO">${title} = LOGITECH G YETI ORB RGB BLACK – Life Gadget</msg>
+<status status="PASS" starttime="20231124 12:37:35.326" endtime="20231124 12:37:35.339"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>LOGITECH G YETI ORB RGB BLACK – Life Gadget</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:37:35.340" endtime="20231124 12:37:35.341"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231124 12:37:35.358" level="INFO">${path} = http://45.144.164.182:8080/product/logitech-g-yeti-orb-rgb-black/</msg>
+<status status="PASS" starttime="20231124 12:37:35.341" endtime="20231124 12:37:35.358"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${path}</arg>
+<arg>http://45.144.164.182:8080/product/logitech-g-yeti-orb-rgb-black/</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:37:35.360" endtime="20231124 12:37:35.360"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:34.834" endtime="20231124 12:37:35.361"/>
+</test>
+<test id="s1-t4" name="Add to Cart" line="57">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddCartIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:35.365" level="INFO">Clicking element 'xpath=//*[@id="product-81"]/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20231124 12:37:35.364" endtime="20231124 12:37:35.904"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 12:37:38.906" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231124 12:37:35.905" endtime="20231124 12:37:38.906"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:35.364" endtime="20231124 12:37:38.907"/>
+</test>
+<test id="s1-t5" name="Check Out" line="60">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CartIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:38.910" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[3]/div/ul/li[1]/div[1]/button'.</msg>
+<status status="PASS" starttime="20231124 12:37:38.909" endtime="20231124 12:37:38.994"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name}</var>
+<arg>${ProductNameInCart}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:39.046" level="INFO">${product_name} = LOGITECH G YETI ORB RGB BLACK</msg>
+<status status="PASS" starttime="20231124 12:37:38.995" endtime="20231124 12:37:39.046"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${product_name}</arg>
+<arg>LOGITECH G YETI ORB RGB BLACK</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:37:39.048" endtime="20231124 12:37:39.048"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${CartPage}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231124 12:37:39.068" level="INFO">Current page contains element 'xpath=//div[@class="cart-modal cart-modal-1 active-cart"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:39.049" endtime="20231124 12:37:39.068"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 12:37:42.069" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231124 12:37:39.069" endtime="20231124 12:37:42.069"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CheckOutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:42.071" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[3]/div/ul/li[1]/div[2]/div[1]/div[2]/div[2]/div[2]/a[3]'.</msg>
+<status status="PASS" starttime="20231124 12:37:42.070" endtime="20231124 12:37:42.793"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231124 12:37:42.808" level="INFO">${path} = http://45.144.164.182:8080/checkout/</msg>
+<status status="PASS" starttime="20231124 12:37:42.794" endtime="20231124 12:37:42.808"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${path}</arg>
+<arg>${CheckoutPath}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:37:42.809" endtime="20231124 12:37:42.810"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:38.908" endtime="20231124 12:37:42.810"/>
+</test>
+<test id="s1-t6" name="Input Data To Create Bill" line="69">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FNameField}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:42.814" level="INFO">Typing text 'Sorawit' into text field 'xpath=//*[@id="billing_first_name"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:42.813" endtime="20231124 12:37:43.019"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LNameField}</arg>
+<arg>${Lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:43.021" level="INFO">Typing text 'Auetrakul' into text field 'xpath=//*[@id="billing_last_name"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:43.020" endtime="20231124 12:37:43.179"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${HouseNumberField}</arg>
+<arg>${HouseNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:43.181" level="INFO">Typing text '150' into text field 'xpath=//*[@id="billing_address_1"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:43.180" endtime="20231124 12:37:43.310"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ApartmentNameField}</arg>
+<arg>${Apartment}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:43.311" level="INFO">Typing text 'SalayaOne' into text field 'xpath=//*[@id="billing_address_2"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:43.311" endtime="20231124 12:37:43.446"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TownFeild}</arg>
+<arg>${TownName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:43.448" level="INFO">Typing text 'ChinaTown' into text field 'xpath=//*[@id="billing_city"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:43.447" endtime="20231124 12:37:43.614"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PostCodeField}</arg>
+<arg>${PostCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:43.617" level="INFO">Typing text '10500' into text field 'xpath=//*[@id="billing_postcode"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:43.615" endtime="20231124 12:37:43.794"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PostCodeField}</arg>
+<arg>${PostCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:43.795" level="INFO">Typing text '10500' into text field 'xpath=//*[@id="billing_postcode"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:43.794" endtime="20231124 12:37:43.941"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PhoneField}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:43.941" level="INFO">Typing text '0981111111' into text field 'xpath=//*[@id="billing_phone"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:43.941" endtime="20231124 12:37:44.229"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EmailField}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:44.230" level="INFO">Typing text 'petch47758@gmail.com' into text field 'xpath=//*[@id="billing_email"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:44.230" endtime="20231124 12:37:44.615"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 12:37:49.617" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231124 12:37:44.616" endtime="20231124 12:37:49.617"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:42.812" endtime="20231124 12:37:49.617"/>
+</test>
+<test id="s1-t7" name="Click PlaceOrder To checkout" line="80">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${PlaceOrderButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231124 12:37:49.624" level="INFO">Clicking button 'xpath=//*[@id="place_order"]'.</msg>
+<status status="PASS" starttime="20231124 12:37:49.623" endtime="20231124 12:37:49.859"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 12:37:59.861" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231124 12:37:49.860" endtime="20231124 12:37:59.861"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css=section.woocommerce-order-details</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231124 12:37:59.862" endtime="20231124 12:37:59.890"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${path}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231124 12:37:59.898" level="INFO">${path} = http://45.144.164.182:8080/checkout/order-received/188/?key=wc_order_3MOj4vBsc1hhJ</msg>
+<status status="PASS" starttime="20231124 12:37:59.892" endtime="20231124 12:37:59.898"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${path}</arg>
+<arg>${CompleteCheckOutPath}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231124 12:37:59.898" endtime="20231124 12:37:59.898"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:49.621" endtime="20231124 12:37:59.899"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231124 12:37:59.901" endtime="20231124 12:38:06.215"/>
+</kw>
+<status status="PASS" starttime="20231124 12:37:30.626" endtime="20231124 12:38:06.215"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Test2">Test2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

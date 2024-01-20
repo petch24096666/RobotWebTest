@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20231124 12:36:22.158" rpa="false" schemaversion="4">
+<suite id="s1" name="Test1" source="C:\Users\petch\Desktop\Year3-1\ITDS362_Software Quality Assurance and Testing\project phase 2\UI Testing\Test1\test1.robot">
+<test id="s1-t1" name="Test Search LifeGadget using Chrome" line="15">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url_lifeGadget}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231124 12:36:22.404" level="INFO">Opening browser 'Chrome' to base url 'http://45.144.164.182:8080/'.</msg>
+<status status="PASS" starttime="20231124 12:36:22.403" endtime="20231124 12:36:25.117"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231124 12:36:25.118" endtime="20231124 12:36:25.239"/>
+</kw>
+<status status="PASS" starttime="20231124 12:36:22.402" endtime="20231124 12:36:25.240"/>
+</test>
+<test id="s1-t2" name="Test Search Microphone" line="18">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:25.243" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:36:25.242" endtime="20231124 12:36:25.456"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${MicrophoneText}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:25.458" level="INFO">Typing text 'Microphone' into text field 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:36:25.457" endtime="20231124 12:36:25.751"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:25.754" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20231124 12:36:25.752" endtime="20231124 12:36:26.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 12:36:29.164" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231124 12:36:26.163" endtime="20231124 12:36:29.164"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231124 12:36:29.177" level="INFO">${title} = Search Results for “Microphone” – Life Gadget</msg>
+<status status="PASS" starttime="20231124 12:36:29.165" endtime="20231124 12:36:29.177"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Search Results for “Microphone” – Life Gadget</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:36:29.178" endtime="20231124 12:36:29.178"/>
+</kw>
+<status status="PASS" starttime="20231124 12:36:25.241" endtime="20231124 12:36:29.179"/>
+</test>
+<test id="s1-t3" name="Test Search IPad" line="25">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:29.183" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:36:29.182" endtime="20231124 12:36:29.288"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${IPadText}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:29.291" level="INFO">Typing text 'IPad' into text field 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:36:29.289" endtime="20231124 12:36:29.459"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:29.460" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20231124 12:36:29.460" endtime="20231124 12:36:29.930"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 12:36:32.932" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231124 12:36:29.931" endtime="20231124 12:36:32.932"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231124 12:36:32.944" level="INFO">${title} = Search Results for “IPad” – Life Gadget</msg>
+<status status="PASS" starttime="20231124 12:36:32.933" endtime="20231124 12:36:32.944"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Search Results for “IPad” – Life Gadget</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:36:32.945" endtime="20231124 12:36:32.945"/>
+</kw>
+<status status="PASS" starttime="20231124 12:36:29.181" endtime="20231124 12:36:32.947"/>
+</test>
+<test id="s1-t4" name="Test Search USB" line="32">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:32.950" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:36:32.949" endtime="20231124 12:36:33.096"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchBar}</arg>
+<arg>${USBText}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:33.098" level="INFO">Typing text 'USB' into text field 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/input[2]'.</msg>
+<status status="PASS" starttime="20231124 12:36:33.097" endtime="20231124 12:36:33.431"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231124 12:36:33.432" level="INFO">Clicking element 'xpath=//*[@id="header-section"]/div[2]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20231124 12:36:33.431" endtime="20231124 12:36:33.739"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231124 12:36:36.740" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231124 12:36:33.740" endtime="20231124 12:36:36.740"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231124 12:36:36.752" level="INFO">${title} = Search Results for “USB” – Life Gadget</msg>
+<status status="PASS" starttime="20231124 12:36:36.741" endtime="20231124 12:36:36.752"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Search Results for “USB” – Life Gadget</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231124 12:36:36.753" endtime="20231124 12:36:36.753"/>
+</kw>
+<status status="PASS" starttime="20231124 12:36:32.948" endtime="20231124 12:36:36.754"/>
+</test>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231124 12:36:36.756" endtime="20231124 12:36:43.043"/>
+</kw>
+<status status="PASS" starttime="20231124 12:36:22.160" endtime="20231124 12:36:43.044"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test1">Test1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
